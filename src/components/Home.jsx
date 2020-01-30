@@ -12,18 +12,23 @@ class Home extends Component {
   render() {
     // if (!this.props.products) console.log(this.props.products);
     return (
-      <div className="home">
-        <Header />
-        <h2> This is the Home Page </h2>
-        {this.props.products.map(item => (
-          <ProductList
-            name={item.name}
-            imgurl={item.imageUrl}
-            intock={item.inStock}
-            price={item.price}
-            itemId={item.id}
-          />
-        ))}
+      <div>
+        <Header/>
+        <hr />
+        <h5> Welcome to your shop! </h5>
+        <br />
+        <div className="home">
+          {this.props.products.map(item => (
+            <ProductList
+              name={item.name}
+              imgurl={item.imageUrl}
+              intock={item.inStock}
+              price={item.price}
+              itemId={item.id}
+            />
+          ))}
+        </div>
+
         <Category />
       </div>
     );

@@ -11,42 +11,37 @@ class ProductList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="productcard">
         <img
           src={this.props.imgurl}
           alt={this.props.name}
-          height="120rem"
-          width="120rem"
+          height="200rem"
+          width="200rem"
         />
         <h4>{this.props.name}</h4>
-        <h6>{this.props.price}</h6>
+        <h6>$ {this.props.price}</h6>
         <button
           className="waves-effect waves-light btn"
           onClick={() => this.onClick(this.props.itemId)}
         >
           BUY
         </button>
-        {/* <div class="row">
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-image">
-          <img height="120rem"
-          width="120rem" src={this.props.imgurl}>
-          <span class="card-title">{this.props.name}</span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-        </div>
-        <div class="card-content">
-          <p>{this.props.name}</p>
-          <button
-          className="waves-effect waves-light btn"
-          onClick={() => this.onClick(this.props.itemId)}
-        >
-          BUY
-        </button>
-        </div>
-      </div>
-    </div>
-  </div> */}
+        {/* <div className="row">
+          <div className="col s12 m6">
+            <div className="card small">
+              <div className="card-image">
+                <img src="images/sample-1.jpg" />
+                <span className="card-title">{this.props.name}</span>
+                <a className="btn-floating halfway-fab waves-effect waves-light red">
+                  <i className="material-icons">+</i>
+                </a>
+              </div>
+              <div class="card-content">
+                <p>{this.props.price}</p>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     );
   }

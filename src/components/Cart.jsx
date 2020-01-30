@@ -7,12 +7,12 @@ class Cart extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>
+      <div className="cart">
+        <h7>
           cart has{" "}
           {this.props.cartitems ? this.props.cartitems.length : "NO ITEMS"}{" "}
           items
-        </h1>
+        </h7>
       </div>
     );
   }
