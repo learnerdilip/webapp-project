@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Header from "./Header";
 import { fetchProducts } from "../store/home/action";
 import ProductList from "./ProductList";
+import Category from "./Category";
 
 class Home extends Component {
   componentDidMount() {
@@ -20,8 +21,10 @@ class Home extends Component {
             imgurl={item.imageUrl}
             intock={item.inStock}
             price={item.price}
+            itemId={item.id}
           />
         ))}
+        <Category />
       </div>
     );
   }
