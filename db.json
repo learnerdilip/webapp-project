@@ -163,20 +163,20 @@
   ],
   "categories": [
     {
-      "id": 1,
-      "name": "Category 1"
+      "id": "check it out!",
+      "name": "Cars"
     },
     {
-      "id": 2,
-      "name": "Category 2"
+      "id": "check it out!",
+      "name": "Clothes"
     },
     {
-      "id": 3,
-      "name": "Category 3"
+      "id": "check it out!",
+      "name": "SportsItem"
     },
     {
-      "id": 4,
-      "name": "Category 4"
+      "id": "check it out!",
+      "name": "Electronics"
     }
   ]
 }

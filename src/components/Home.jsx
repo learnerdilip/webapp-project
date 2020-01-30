@@ -13,7 +13,7 @@ class Home extends Component {
     // if (!this.props.products) console.log(this.props.products);
     return (
       <div>
-        <Header/>
+        <Header />
         <hr />
         <h5> Welcome to your shop! </h5>
         <br />
@@ -30,6 +30,37 @@ class Home extends Component {
         </div>
 
         <Category />
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Some good stuff will come here!</h5>
+                <p class="grey-text text-lighten-4">
+                  
+                </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Important Links</h5>
+                <ul>
+                  <li>
+                    <a class="grey-text text-lighten-3" href="#!">
+                      You will go to som other page later
+                    </a>
+                
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2020 Copyright Dilip at codaisseur
+              <a class="grey-text text-lighten-4 right" href="#!">
+                More Links
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }

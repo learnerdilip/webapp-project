@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 class Cart extends Component {
   componentDidMount() {
@@ -11,7 +12,8 @@ class Cart extends Component {
         <h7>
           cart has{" "}
           {this.props.cartitems ? this.props.cartitems.length : "NO ITEMS"}{" "}
-          items
+          
+          <Link to='/checkout' >items</Link>
         </h7>
       </div>
     );

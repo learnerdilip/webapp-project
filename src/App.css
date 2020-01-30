@@ -21,3 +21,8 @@ html {
 .cart {
   margin-left: 1400px;
 }
+
+.collection {
+  width: 30%;
+  margin: auto;
+}
