@@ -9,11 +9,14 @@ class Category extends Component {
   }
 
   render() {
-    return <div>
-      <h3>The category page</h3>
-      {this.props.categories.map(cat => <CategoryItem id={cat.id} name={cat.name}/> )}
-      
-    </div>
+    return (
+      <div className="categoryList">
+        <h4>The categories</h4>
+        {this.props.categories.map(cat => (
+          <CategoryItem id={cat.id} name={cat.name} />
+        ))}
+      </div>
+    );
   }
 }
 

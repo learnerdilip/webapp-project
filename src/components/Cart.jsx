@@ -12,8 +12,7 @@ class Cart extends Component {
         <h7>
           cart has{" "}
           {this.props.cartitems ? this.props.cartitems.length : "NO ITEMS"}{" "}
-          
-          <Link to='/checkout' >items</Link>
+          <Link to="/checkout">items</Link>
         </h7>
       </div>
     );

@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Home from "./Home";
 
 class Checkout extends Component {
   render() {
+    const total = this.props.cartItems.reduce((sum, item) => {
+      return sum + parseInt(item.price);
+    }, 0);
+    console.log("TOTAL", total);
     return (
       <div>
         <Link to="/">Go to HOME PAGE!</Link>
@@ -29,12 +32,14 @@ class Checkout extends Component {
               );
             })}
           </tbody>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Total</th>
+              <th>{total}</th>
+            </tr>
+          </thead>
         </table>
-        {/* {this.props.cartItems.map(item => (
-          <h4>
-            {item.name} ....... {item.price}
-          </h4>
-        ))} */}
       </div>
     );
   }

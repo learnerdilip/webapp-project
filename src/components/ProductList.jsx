@@ -24,24 +24,8 @@ class ProductList extends Component {
           className="waves-effect waves-light btn"
           onClick={() => this.onClick(this.props.itemId)}
         >
-          BUY
+          ADD TO CART
         </button>
-        {/* <div className="row">
-          <div className="col s12 m6">
-            <div className="card small">
-              <div className="card-image">
-                <img src="images/sample-1.jpg" />
-                <span className="card-title">{this.props.name}</span>
-                <a className="btn-floating halfway-fab waves-effect waves-light red">
-                  <i className="material-icons">+</i>
-                </a>
-              </div>
-              <div class="card-content">
-                <p>{this.props.price}</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     );
   }

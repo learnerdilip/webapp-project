@@ -1,14 +1,35 @@
 html {
   text-align: center;
+  /* background-color: indianred; */
+  /* color: white; */
+}
+
+.hometitle {
+  width: 80%;
+}
+
+.loginname {
+  width: 10%;
 }
 
 .home {
   display: flex;
+  align-content: space-between;
   flex-wrap: wrap;
-  width: 70%;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
+  /* margin-left: */
+  border: solid black 5px;
+}
+.categoryList {
+  width: 20%;
 }
 
+.cat-item,
+.collection-item {
+  border: solid gray 0.1px;
+  background-color: cadetblue;
+}
 .productcard {
   margin: 15px;
 }
@@ -19,15 +40,25 @@ html {
   align-content: space-between;
 }
 .cart {
-  margin-left: 1400px;
+  width: 10%;
 }
 
 .collection {
-  width: 30%;
+  /* width: 0%; */
   margin: auto;
+  border: none;
 }
 
 .checkoutTable {
   width: 60%;
   margin: auto;
+}
+
+.loginFrom {
+  width: 500px;
+  margin: auto;
+}
+
+.homecontainer {
+  display: flex;
 }

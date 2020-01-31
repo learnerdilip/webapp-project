@@ -163,19 +163,19 @@
   ],
   "categories": [
     {
-      "id": "check it out!",
+      "id": 1,
       "name": "Cars"
     },
     {
-      "id": "check it out!",
+      "id": 2,
       "name": "Clothes"
     },
     {
-      "id": "check it out!",
+      "id": 3,
       "name": "SportsItem"
     },
     {
-      "id": "check it out!",
+      "id": 4,
       "name": "Electronics"
     }
   ]

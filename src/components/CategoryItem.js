@@ -1,15 +1,35 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { categorize } from "../store/categoryList/action";
+import { Link } from "react-router-dom";
 
-export default class CategoryItem extends Component {
+class CategoryItem extends Component {
+  showcategory(catId) {
+    const categoryProducts = this.props.productList.filter(
+      item => item.categoryId === catId
+    );
+    this.props.dispatch(categorize(categoryProducts));
+  }
   render() {
+    
     return (
-      <div>
-        <h5>{this.props.name}</h5>
-        <ul class="collection">
-          {" "}
-          <li class="collection-item">{this.props.id}</li>
-        </ul>
-      </div>
+      <Link
+        to={`/category/${this.props.id}` + this.props.id}
+        className="cat-item"
+      >
+        <div onClick={() => this.showcategory(this.props.id)}>
+          {this.props.name}
+        </div>
+        <ul class="collection"> </ul>
+      </Link>
     );
   }
 }
+
+function mapStateToProps(reduxState) {
+  return {
+    productList: reduxState.home
+  };
+}
+
+export default connect(mapStateToProps)(CategoryItem);
