@@ -8,28 +8,33 @@ class Checkout extends Component {
     return (
       <div>
         <Link to="/">Go to HOME PAGE!</Link>
-        <h2>Your choices are awesome!</h2>
-        {this.props.cartItems.map(item => (
-          <h2>
-            {item.name} ....... {item.price}
-          </h2>
-        ))}
-        <table>
-        <thead>
-          <tr>
-              <th>Name</th>
+        <h3>Thank you for visiting!</h3>
+
+        <table className="checkoutTable">
+          <thead>
+            <tr>
+              <th>ID</th>
               <th>Item Name</th>
               <th>Item Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-        </tbody>
-      </table>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.cartItems.map(item => {
+              return (
+                <tr>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>{item.price}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        {/* {this.props.cartItems.map(item => (
+          <h4>
+            {item.name} ....... {item.price}
+          </h4>
+        ))} */}
       </div>
     );
   }
