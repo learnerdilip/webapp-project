@@ -3,9 +3,8 @@ import { connect } from "react-redux";
 import { addToCart } from "../store/cart/action";
 
 class ProductList extends Component {
-  onClick = id => {
+    onClick = id => {
     const addedItem = this.props.products.find(item => item.id === id);
-    console.log("Addeditem", addedItem);
     this.props.dispatch(addToCart(addedItem));
   };
 
@@ -32,7 +31,6 @@ class ProductList extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  // console.log("IN CART", reduxState);
   return {
     products: reduxState.home,
     cartItems: reduxState.cart

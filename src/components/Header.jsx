@@ -7,8 +7,10 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <h4 className="hometitle">The everything place</h4>
-        <Link to="/login" className="loginname" >Log in</Link>
+        <h4 className="hometitle">THE WEBSHOP APP</h4>
+        <Link to="/login" className="loginname">
+          Log in
+        </Link>
         <Cart />
       </div>
     );

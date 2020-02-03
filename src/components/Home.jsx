@@ -14,9 +14,9 @@ class Home extends Component {
     return (
       <div>
         <Header />
-        <hr />
         {/* <h5> Welcome to your shop! </h5> */}
         <br />
+        <hr />
         <div className="homecontainer">
           <Category />
           <div className="home">
