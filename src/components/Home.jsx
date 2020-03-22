@@ -20,15 +20,23 @@ class Home extends Component {
         <div className="homecontainer">
           <Category />
           <div className="home">
-            {this.props.products.map(item => (
-              <ProductList
-                name={item.name}
-                imgurl={item.imageUrl}
-                intock={item.inStock}
-                price={item.price}
-                itemId={item.id}
-              />
-            ))}
+            {this.props.products
+              .filter(
+                product =>
+                  product.categoryId === 1 ||
+                  product.categoryId === 2 ||
+                  product.categoryId === 3 ||
+                  product.categoryId === 4
+              )
+              .map(item => (
+                <ProductList
+                  name={item.name}
+                  imgurl={item.imageUrl}
+                  intock={item.inStock}
+                  price={item.price}
+                  itemId={item.id}
+                />
+              ))}
           </div>
         </div>
         <footer class="page-footer">

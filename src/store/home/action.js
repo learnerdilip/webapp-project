@@ -1,3 +1,5 @@
+import data from "../../../src/db.json";
+
 export function productsFetched(data) {
   return {
     type: "product/FETCHED",
@@ -7,11 +9,12 @@ export function productsFetched(data) {
 
 export function fetchProducts() {
   return (dispatch, getState) => {
-    fetch("http://localhost:4000/products")
-      .then(myJson => myJson.json())
-      .then(data => {
-        // console.log(data, "THE DATA FROM ACTIONS AFTER FETCH");
-        dispatch(productsFetched(data));
-      });
+    // fetch("http://localhost:4000/products")
+    //   .then(myJson => myJson.json())
+    //   .then(data => {
+    //     console.log(data, "THE DATA FROM ACTIONS AFTER FETCH");
+    //     dispatch(productsFetched(data));
+    //   });
+    dispatch(productsFetched(data.products));
   };
 }
